@@ -325,9 +325,6 @@ InModuleScope $script:subModuleName {
     }
 
     Describe 'CertificateDsc.Common\Find-Certificate' -Tag 'Find-Certificate' {
-        # Download and dot source the New-SelfSignedCertificateEx script
-        . (Install-NewSelfSignedCertificateExScript)
-
         # Generate the Valid certificate for testing but remove it from the store straight away
         $certDNSNames = @('www.fabrikam.com', 'www.contoso.com')
         $certDNSNamesReverse = @('www.contoso.com', 'www.fabrikam.com')
