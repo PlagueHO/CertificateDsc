@@ -23,6 +23,7 @@ Import-Module $script:subModuleFile -Force -ErrorAction Stop
 #endregion HEADER
 
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath '..\TestHelpers\CommonTestHelper.psm1')
+Import-Module -Name PSPKI
 
 InModuleScope $script:subModuleName {
     $invalidThumbprint = 'Zebra'
